@@ -56,9 +56,9 @@ with open('input.txt', 'r') as in_file:
     first_score = 0
     second_score = 0
     for line in in_file:
-        opp, mine = line.strip().split(" ")
-        first_score += shape_score[mine] + outcome_dict[opp][mine]
-        second_score += result_points[mine] + result_to_choice[opp][mine]
+        opp_move, my_move = line.strip().split(" ")
+        first_score += shape_score[my_move] + outcome_dict[opp_move][my_move]
+        second_score += result_points[my_move] + result_to_choice[opp_move][my_move]
     
     print(f'First part: {first_score}')
     print(f'Second part: {second_score}')
