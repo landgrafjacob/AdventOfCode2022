@@ -13,6 +13,7 @@ width = len(tree_grid[0])
 for i in range(height):
   tallest = -1
   for j in range(width):
+    # If the tree is taller than all the ones we have see to the left of it, it is visible
     if int(tree_grid[i][j]) > tallest:
       visibility_set.add((i,j))
       tallest = int(tree_grid[i][j])
