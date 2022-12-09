@@ -41,7 +41,7 @@ class Knot:
     x_dist = abs(self.x - self.parent.x)
     y_dist = abs(self.y - self.parent.y)
 
-    # If the x-coord differ by 2 and y-coords differ by 1,
+    # If the x-coords differ by 2 and y-coords differ by 1,
     # move knot diagonally
     # Example case:
     # ...     ...   
@@ -51,7 +51,7 @@ class Knot:
       self.x = (self.x + self.parent.x) // 2
       self.y = self.parent.y
 
-    # Similar to last case
+    # Similar to previous case
     elif x_dist == 1 and y_dist == 2:
       self.y = (self.y + self.parent.y) // 2
       self.x = self.parent.x
